@@ -96,7 +96,8 @@ export class RulesViolationsModule {
     logger: ClassloggerService
   ) {
     logger.info(this, '▶︝ RulesViolationsnModule loaded');
-    this.setupMenu();
+    console.error("Deactivate complience menu entry 1")
+    // this.setupMenu();
   }
 
   private setupMenu(): void {

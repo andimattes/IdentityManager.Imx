@@ -52,7 +52,8 @@ export class InitService {
     private readonly validationDetailService: ShoppingCartValidationDetailService,
     private readonly identityRoleMembershipService: IdentityRoleMembershipsService
   ) {
-    this.setupMenu();
+    console.error("Deactivate complience menu entry 1")
+    // this.setupMenu();
   }
 
   public onInit(routes: Route[]): void {

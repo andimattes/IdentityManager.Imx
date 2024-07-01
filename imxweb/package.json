@@ -3,7 +3,7 @@
   "version": "9.2.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration development",
+    "start": "ng serve --configuration development --host 0.0.0.0",
     "start:remote-dev": "ng serve -c remote-dev",
     "start:remote-qs": "ng serve -c remote-qs",
     "build": "ng build",

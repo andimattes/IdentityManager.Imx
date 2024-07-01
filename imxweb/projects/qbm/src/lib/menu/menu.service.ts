@@ -43,6 +43,7 @@ export class MenuService {
   ) { }
 
   public addMenuFactories(...factories: MenuFactory[]): void {
+    console.error("Adding menu factory:" + factories)
     this.factories.push(...factories);
   }
 
@@ -53,6 +54,12 @@ export class MenuService {
   public async getMenuItems(preProps: string[], features: string[], allowEmpty: boolean = false, projectConfig?: ProjectConfig, groups?: string[]): Promise<EuiTopNavigationItem[]> {
     const menuItems: MenuItem[] = [];
 
+    console.error("preProps", preProps)
+    console.error("features", features)
+    console.error("allowEmpty", allowEmpty)
+    console.error("projectConfig", projectConfig)
+    console.error("groups", groups)
+
     this.factories
       .map(factory => factory(preProps, features, projectConfig, groups || []))
       .filter(menu => menu && (allowEmpty || (menu.items && menu.items.length > 0)))
@@ -60,16 +67,18 @@ export class MenuService {
       .forEach(menu => {
         const existing = menu.id != null && menuItems.find(item => item.id === menu.id);
         if (existing) {
-          if (existing.items) {
+          if (existing.items) { 
             // Here only splice it there are items, otherwise this is a flat home button and it already exists
             existing.items.splice(-1, 0, ...menu.items);
             existing.items = this.sortMenuItems(existing.items);
-          }
+          } 
         } else {
           menuItems.push(menu);
           menu.items = this.sortMenuItems(menu.items);
         }
       });
+
+    console.log("Menu items", menuItems)
 
     return await this.getNavigationItems(menuItems);
   }
@@ -97,6 +106,7 @@ export class MenuService {
       }
       navItems.push(navItem);
     }
+    console.log("navItems", navItems)
     return navItems;
   }
 

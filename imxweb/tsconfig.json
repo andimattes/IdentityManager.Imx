@@ -50,6 +50,13 @@
       "dom"
     ]
   },
+  "exclude": [
+    "node_modules",
+    "e2e",
+    "src/assets",
+    "src/environments",
+    "**/*.spec.ts",
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": false,

@@ -56,6 +56,10 @@ export class ApiClientFetch implements ApiClient {
         this.addVersionHeader(headers);
 
         const observable = defer(() => {
+            
+            console.error("REQUEST to ", this.baseUrl + method.path)
+            console.error("METHOD:", method)
+
             return this.http.fetch(this.baseUrl + method.path, {
                 method: method.httpMethod,
                 credentials: method.credentials,

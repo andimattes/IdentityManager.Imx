@@ -11,6 +11,10 @@
   },
   "exclude": [
     "src/test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "node_modules",
+    "e2e",
+    "src/assets",
+    "src/environments",
   ]
 }

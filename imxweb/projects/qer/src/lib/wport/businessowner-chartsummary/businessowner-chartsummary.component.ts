@@ -167,7 +167,7 @@ export class BusinessOwnerChartSummaryComponent implements OnInit {
         await this.qerClient.typedClient.PortalPersonReports.Get({
           OnlyDirect: true, // direct reports only
           PageSize: 10000,
-          isinactive: '0'
+          // isinactive: '0'
         })
       ).Data;
     }
