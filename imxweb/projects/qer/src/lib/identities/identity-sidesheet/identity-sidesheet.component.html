@@ -1,5 +1,6 @@
 <mat-tab-group #tabs>
-  <mat-tab>
+  <!--
+    <mat-tab>
     <ng-template mat-tab-label>
       <span translate>#LDS#Overview</span>
     </ng-template>
@@ -50,6 +51,7 @@
       </div>
     </ng-template>
   </mat-tab>
+-->
   <mat-tab [label]="'#LDS#Heading Main Data' | translate">
     <div eui-sidesheet-content class="governance-sidesheet__tab-content">
       <div class="governance-sidesheet__tab-content-body">
@@ -76,6 +78,7 @@
               <span [translate]="toggle.checked ? '#LDS#Identity is active' : '#LDS#Identity is inactive'"></span>
             </mat-slide-toggle>
 
+            <!--
             <mat-slide-toggle
               class="custom-toggle"
               #incidentToggle
@@ -87,6 +90,7 @@
             >
               <span [translate]="incidentToggle.checked ? '#LDS#Identity poses a security risk' : '#LDS#Identity does not pose a security risk'"></span>
             </mat-slide-toggle>
+        -->
           </div>
           <mat-accordion>
             <mat-expansion-panel [expanded]="true" *ngIf="cdrListPersonal.length > 0">
@@ -137,6 +141,7 @@
 
     </div>
   </mat-tab>
+  <!--
   <mat-tab>
     <ng-template mat-tab-label>
       <span translate>#LDS#Heading Memberships</span>
@@ -172,6 +177,7 @@
       </ng-template>
     </mat-tab>
   </ng-container>
+-->
 </mat-tab-group>
 <div eui-sidesheet-actions>
   <button
@@ -185,6 +191,7 @@
       <eui-icon icon="userremove"></eui-icon>
     <span translate>#LDS#Delete</span>
   </button>
+  <!--
   <button mat-stroked-button data-imx-identifier="identity-sidesheet-actions" title="{{ '#LDS#Actions' | translate }}" [matMenuTriggerFor]="actionsMenu">
     <eui-icon icon="ellipsisvertical"></eui-icon>
   </button>
@@ -205,6 +212,7 @@
       <span translate>#LDS#Assign to new manager</span>
     </button>
   </mat-menu>
+-->
   <button
     *ngIf="data.canEdit"
     mat-flat-button

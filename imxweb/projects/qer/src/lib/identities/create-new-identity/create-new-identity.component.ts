@@ -202,7 +202,8 @@ export class CreateNewIdentityComponent implements OnDestroy {
       }
     }));
 
-    const identifierColumns = ['FirstName', 'LastName', 'CentralAccount', 'DefaultEmailAddress'];
+    // let identifierColumns = ['FirstName', 'LastName', 'CentralAccount', 'DefaultEmailAddress'];
+    let identifierColumns = ['FirstName', 'LastName', 'Gender', 'DefaultEmailAddress', 'EntryDate', 'ExitDate']
     this.cdrListIdentifier = this.cdrFactoryService.buildCdrFromColumnList(this.data.selectedIdentity.GetEntity(),identifierColumns);
 
     const personalColumns = this.data.projectConfig.PersonConfig.VI_Employee_MasterData_Attributes
@@ -214,5 +215,6 @@ export class CreateNewIdentityComponent implements OnDestroy {
 
     const localityColumns = this.data.projectConfig.PersonConfig.VI_Employee_MasterData_LocalityAttributes;
     this.cdrListLocality = this.cdrFactoryService.buildCdrFromColumnList(this.data.selectedIdentity.GetEntity(),localityColumns);
-  }
+   
+    }
 }

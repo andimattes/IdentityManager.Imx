@@ -281,24 +281,25 @@ import { IdentitySidesheetComponent } from '../identities/identity-sidesheet/ide
       this.displayedColumns = [
         // this.entitySchemaPersonReports.Columns[DisplayColumns.DISPLAY_PROPERTYNAME],
         // this.entitySchemaPersonReports.Columns.IsSecurityIncident,
-        // this.entitySchemaPersonReports.Columns.UID_Department
+        // this.entitySchemaPersonReports.Columns.UID_Department,
+        this.entitySchemaPersonReports.Columns.LastName,
+        this.entitySchemaPersonReports.Columns.FirstName,
         this.entitySchemaPersonReports.Columns.DefaultEmailAddress,
+        this.entitySchemaPersonReports.Columns.ExitDate
       ];
 
+      /**
       if (!this.isAdmin) {
         this.displayedColumns.push(
-          // this.entitySchemaPersonReports.Columns.IdentityType,
-          // this.entitySchemaPersonReports.Columns.EmployeeType,
-          // this.entitySchemaPersonReports.Columns.IsExternal,
+          this.entitySchemaPersonReports.Columns.IdentityType,
+          this.entitySchemaPersonReports.Columns.EmployeeType,
+          this.entitySchemaPersonReports.Columns.IsExternal,
         );
       }
-
-    // this.entitySchemaPersonReports.Columns.ExitDate,
-    // this.entitySchemaPersonReports.Columns.LastName,
-    // this.entitySchemaPersonReports.Columns.FirstName,
+      **/
 
       // Ensure this column is always added last
-      this.displayedColumns.push(this.entitySchemaPersonReports.Columns.XMarkedForDeletion);
+      // this.displayedColumns.push(this.entitySchemaPersonReports.Columns.XMarkedForDeletion);
 
       this.displayedInnerColumns = [this.entitySchemaPersonReports.Columns[DisplayColumns.DISPLAY_PROPERTYNAME]];
 

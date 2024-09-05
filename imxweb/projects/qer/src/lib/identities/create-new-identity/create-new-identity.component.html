@@ -47,6 +47,8 @@
             </div>
           </eui-alert>
         </mat-expansion-panel>
+
+        <!--
         <mat-expansion-panel data-imx-identifier="create-new-identity-expansion-personal"  *ngIf="cdrListPersonal.length > 0">
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -74,6 +76,7 @@
           <imx-cdr-editor *ngFor="let cdr of cdrListLocality" [cdr]="cdr" (readOnlyChanged)=update(cdr,cdrListLocality) (controlCreated)="identityForm.addControl(cdr.column.ColumnName, $event)">
           </imx-cdr-editor>
         </mat-expansion-panel>
+        -->
       </mat-accordion>
     </form>
   </mat-card>

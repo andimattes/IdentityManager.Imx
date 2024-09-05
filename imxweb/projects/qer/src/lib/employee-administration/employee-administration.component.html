@@ -12,6 +12,8 @@
     <imx-data-table [dst]="dst" (highlightedEntityChanged)="onIdentityChanged($event)" detailViewVisible="false"
       data-imx-identifier="identities-tabledata-table" mode="manual" [groupData]="groupData"
       (groupDataChanged)="onGroupingChange($event)">
+      
+      <!--
       <imx-data-table-column [entityColumn]="entitySchemaPersonReports?.Columns[DisplayColumns.DISPLAY_PROPERTYNAME]">
         <ng-template let-item>
           <div data-imx-identifier="identities-tabledata-display">{{ item.GetEntity().GetDisplay() }}</div>
@@ -34,6 +36,16 @@
       </imx-data-table-column>
       <imx-data-table-column *ngIf="!this.isAdmin" [entityColumn]="entitySchemaPersonReports?.Columns.IsExternal">
       </imx-data-table-column>
+      -->
+      <imx-data-table-column [entityColumn]="entitySchemaPersonReports?.Columns.LastName">
+      </imx-data-table-column>
+      <imx-data-table-column [entityColumn]="entitySchemaPersonReports?.Columns.FirstName">
+      </imx-data-table-column>
+      <imx-data-table-column [entityColumn]="entitySchemaPersonReports?.Columns.DefaultEmailAddress">
+      </imx-data-table-column>
+      <imx-data-table-column [entityColumn]="entitySchemaPersonReports?.Columns.ExitDate">
+      </imx-data-table-column>
+      
       <imx-data-table-generic-column alignHeader="center" alignContent="center"
         [columnName]="entitySchemaPersonReports?.Columns.XMarkedForDeletion.ColumnName">
         <ng-template let-item>
