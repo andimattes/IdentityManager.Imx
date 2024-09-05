@@ -75,6 +75,7 @@ import {
   StatisticsModule,
   ViewDevicesModule,
   MyResponsibilitiesViewModule,
+  EmployeeAdministrationModule,
   ApprovalWorkFlowModule,
   DataExplorerViewModule,
   UserProcessModule,
@@ -152,7 +153,8 @@ export function getBaseHref(): string {
     UserProcessModule,    
     SourceDetectiveModule,
     RoleMembershipsModule,
-    TeamResponsibilitiesModule
+    TeamResponsibilitiesModule,
+    EmployeeAdministrationModule
   ],
   providers: [
     { provide: 'environment', useValue: environment },

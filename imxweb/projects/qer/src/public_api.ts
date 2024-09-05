@@ -1,3 +1,4 @@
+import { EmployeeAdministrationModule } from './lib/employee-administration/employee-administration.module';
 /*
  * ONE IDENTITY LLC. PROPRIETARY INFORMATION
  *
@@ -92,6 +93,7 @@ export { JustificationModule } from './lib/justification/justification.module';
 export { JustificationService } from './lib/justification/justification.service';
 export { MyResponsibilitiesRegistryService } from './lib/my-responsibilities-view/my-responsibilities-registry.service';
 export { MyResponsibilitiesViewModule } from './lib/my-responsibilities-view/my-responsibilities-view.module';
+export { EmployeeAdministrationModule } from './lib/employee-administration/employee-administration.module';
 export * from './lib/new-request/new-request.component';
 export * from './lib/new-request/new-request.module';
 export { ObjectAttestationStatistics } from './lib/object-attestation/object-attestation-statistics.interface';

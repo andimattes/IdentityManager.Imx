@@ -21,5 +21,7 @@
     },
     "search.followSymlinks": false,
     "git.enabled": true,
-    "git.autofetch": false
+    "git.autofetch": false,
+    "typescript.tsserver.maxTsServerMemory": 4000,
+    "typescript.tsserver.nodePath": "node"
 }   
